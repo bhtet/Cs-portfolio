@@ -20,7 +20,9 @@
             right:30px;
             font-family:"Arial";
             }
-            #tim_picture {text-align:center;}
+            #tim_picture {text-align:center;
+                margin-bottom:65px;
+            }
             #element_diagram {text-align:center;}
             #lie_picture {text-align:center;}
             #css_diagram {text-align:center;}
@@ -28,7 +30,7 @@
                 text-align:center;
                 text-decoration:underline
             }
-            h2 {text-align:center; 
+            h2, h3 {text-align:center; 
                 font-size:30px;
                 text-decoration:underline;
             }
@@ -36,12 +38,25 @@
             #htmldiagram_caption {margin-top:1px;}
             #lie_caption {margin-top:1px;}
             #cssdiagram_caption {margin-top:1px;}
-            #table_title {font-size:25px;
+            .table_title {font-size:25px;
             font-weight:bold;
             margin-bottom:1px;
             }
             a:hover {background-color:yellow;}
             p {text-indent:50px;}
+            #html_section {width:50%;
+                float:left;
+                text-align:justify;
+                text-justify:inter-word;
+                margin-right:20px;
+            }
+            #css_section {margin-top:40px;
+                text-align:justify;
+                text-justify:inter-word;
+            }
+            #html_background {margin-top:30px;
+                margin-bottom:55px;
+            }
         </style>
     </head>
     <body>
@@ -65,14 +80,14 @@
 structure in a specific way. They also tell the browser what content to put on the website so every user can see the same information. In this project, we used two types of coding language: HTML and CSS. We used HTML as a basic framework 
 of our website. It allowed us to put in the content of the website but not stylize it. On the other hand, CSS is the coding language that changes the format of the website to alter the appearance. This is how coders can take the same 
 website and truely make it their own; it is what allows for such a diverse visual range of websites on the internet. This webpage is an explination of these two languages and how they come together to shape websites such as this one.</p>
-<h2>Hypertext Markup Language</h2>
-<p>HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was created by computer 
+<div id="html_section"><h2>Hypertext Markup Language</h2>
+<p id="html_background">HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was created by computer 
 scientist Tim Berners-Lee in 1989 as the standard language of his new invention, the World Wide Web. He thought of HTML while working at CERN, the European Laboratory for Particle Physics, as a way for researchers to share their research 
 and work together on the Web. His idea was to link research papers together so scientists could cross-reference multiple documents at a time, which was the start of hypertext for the Web. Eventually, HTML became the main language for 
 programing websites on the Web and it still is to this day.</p>
 <div id="tim_picture"><img src="http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg" width="400">
 <p id="tim_caption">Tim Berners-Lee, Inventor of the World Wide Web and of HTML</p></div>
-<p>HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (<>). These brackets tell the browser that what is inside them is ment for the browser 
+<p id="html_workings">HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (<>). These brackets tell the browser that what is inside them is ment for the browser 
 to read, not display on the webpage. For example, a paragraph can be defined in HTML as a <em>p</em>. Some tags consist of a start tage and an end tag. The start tag is placed at the start of its content and the end tag closes the 
 content. The difference between them is that there is a forward slash (/) inside the brackets before the tag for the end tag that isn't present for the start tag. When refering to the start and end tags along with its content in between, 
 it is called an element. Browsers read the elements as a whole to understand what type of content it is and what it is. In addition, tags can be modified with attributes. Attributes are placed inside the start tag to add additional 
@@ -81,7 +96,7 @@ is aligned to the left, venter, or right. HTML document code is seperated by the
 is where all of the visible content of the webpage is place so it can be seen on the actual page. Overall, tags and elements are the basis of HTML, telling the browser what to show on the webpage and being the structure of it.</p>
 <div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="500"> 
 <p id="htmldiagram_caption">A diagram labeling the structure of an HTML element.</p></div>
-<div id="tags_table"><p align="center" id="table_title">Examples of HTML Tags</p>
+<div id="tags_table"><p align="center" class="table_title">Examples of HTML Tags</p>
 <table align="center">
     <thead>
         <tr>
@@ -122,8 +137,8 @@ is where all of the visible content of the webpage is place so it can be seen on
             <td>&ltimg src="url"&gt</td>
         </tr>
     </tbody>
-</table></div>
-<h2>Cascading Style Sheets</h2>
+</table></div></div>
+<div id="css_section"><h3>Cascading Style Sheets</h3>
 <p>The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
 and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer of Opera, a browser.
 He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996, CSS 1 was released 
@@ -139,6 +154,43 @@ braces/ curly brackets ({ }). Inside these brackets is the CSS property (size, c
 paragraph shows the basic structure of a piece of CSS code. There is a large variety of CSS commands that allows for a diverse range of website designs. CSS is what distinguishes basic HTML form websites to creative centers of 
 information. </p>
 <div id="css_diagram"><img src="http://mercury.tvu.ac.uk/~olivier/wds/session4/css_syntax.png" width="500">
-<p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div>
+<p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div></div>
+<p class="table_title">Examples of CSS properties</p>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>What It Does</th>
+        <th>Specific Example</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>background-color</td>
+            <td>Changes the background color</td>
+            <td>background-color: yellow;</td>
+        </tr>
+         <tr>
+            <td>font-family</td>
+            <td>Changes the type of font used</td>
+            <td>font-family: "Arial";</td>
+        </tr>
+         <tr>
+            <td>font-weight</td>
+            <td>Determines the thickness of the font</td>
+            <td>font-weight: bold;</td>
+        </tr>
+         <tr>
+            <td>font-decoration</td>
+            <td>Adds decorations such as underline to the text</td>
+            <td>font-decoration: underline;</td>
+        </tr>
+         <tr>
+            <td>float</td>
+            <td>Allows objects to wrap around other objects, such as text wrapped around an image</td>
+            <td>float: left;</td>
+        </tr>
+    </tbody>
+</table>
      </body>
 </html>
