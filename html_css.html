@@ -37,13 +37,16 @@
             #tim_caption {margin-top:1px;}
             #htmldiagram_caption {margin-top:1px;}
             #lie_caption {margin-top:1px;}
-            #cssdiagram_caption {margin-top:1px;}
+            #cssdiagram_caption {margin-top:1px;
+                margin-bottom:64px;
+            }
             .table_title {font-size:25px;
             font-weight:bold;
             margin-bottom:1px;
+            text-align:center;
             }
-            a:hover {background-color:yellow;}
             p {text-indent:50px;}
+            a:hover {background-color:yellow;}
             #html_section {width:50%;
                 float:left;
                 text-align:justify;
@@ -57,6 +60,7 @@
             #html_background {margin-top:30px;
                 margin-bottom:55px;
             }
+            #html_tags_table {margin-bottom:30px;}
         </style>
     </head>
     <body>
@@ -81,13 +85,13 @@ structure in a specific way. They also tell the browser what content to put on t
 of our website. It allowed us to put in the content of the website but not stylize it. On the other hand, CSS is the coding language that changes the format of the website to alter the appearance. This is how coders can take the same 
 website and truely make it their own; it is what allows for such a diverse visual range of websites on the internet. This webpage is an explination of these two languages and how they come together to shape websites such as this one.</p>
 <div id="html_section"><h2>Hypertext Markup Language</h2>
-<p id="html_background">HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was created by computer 
+<p id="html_background"><strong>Background:</strong> HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was created by computer 
 scientist Tim Berners-Lee in 1989 as the standard language of his new invention, the World Wide Web. He thought of HTML while working at CERN, the European Laboratory for Particle Physics, as a way for researchers to share their research 
 and work together on the Web. His idea was to link research papers together so scientists could cross-reference multiple documents at a time, which was the start of hypertext for the Web. Eventually, HTML became the main language for 
 programing websites on the Web and it still is to this day.</p>
 <div id="tim_picture"><img src="http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg" width="400">
 <p id="tim_caption">Tim Berners-Lee, Inventor of the World Wide Web and of HTML</p></div>
-<p id="html_workings">HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (<>). These brackets tell the browser that what is inside them is ment for the browser 
+<p id="html_workings"><strong>How it works:</strong> HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (<>). These brackets tell the browser that what is inside them is ment for the browser 
 to read, not display on the webpage. For example, a paragraph can be defined in HTML as a <em>p</em>. Some tags consist of a start tage and an end tag. The start tag is placed at the start of its content and the end tag closes the 
 content. The difference between them is that there is a forward slash (/) inside the brackets before the tag for the end tag that isn't present for the start tag. When refering to the start and end tags along with its content in between, 
 it is called an element. Browsers read the elements as a whole to understand what type of content it is and what it is. In addition, tags can be modified with attributes. Attributes are placed inside the start tag to add additional 
@@ -97,7 +101,7 @@ is where all of the visible content of the webpage is place so it can be seen on
 <div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="500"> 
 <p id="htmldiagram_caption">A diagram labeling the structure of an HTML element.</p></div>
 <div id="tags_table"><p align="center" class="table_title">Examples of HTML Tags</p>
-<table align="center">
+<table align="center" id="html_tags_table">
     <thead>
         <tr>
             <th>General Form of Tag</th>
@@ -139,13 +143,13 @@ is where all of the visible content of the webpage is place so it can be seen on
     </tbody>
 </table></div></div>
 <div id="css_section"><h3>Cascading Style Sheets</h3>
-<p>The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
+<p><strong>Background:</strong> The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
 and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer of Opera, a browser.
 He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996, CSS 1 was released 
 as the first version of the new style sheets for the World Wide Web. CSS is still used to customize the look of websites, creating unique looking websites with the same HTML code. </p>
 <div id="lie_picture"><img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" width="300">
 <p id="lie_caption">Hakon Wium Lie, the man who proposed CSS</p></div>
-<p>CSS is coded in a similar manner to HTML but there are some differences. CSS code is placed inside the <em>style</em> tags inside the <em>head</em> tags at the top of the page. This tells the browser to read the code inside the 
+<p><strong>How it works:</strong> CSS is coded in a similar manner to HTML but there are some differences. CSS code is placed inside the <em>style</em> tags inside the <em>head</em> tags at the top of the page. This tells the browser to read the code inside the 
 <em>style</em> tags in CSS instead of HTML. When it comes to writing the actual code, there are more differences. The first part of a line of code is the selector, which is just the name of the elements the coder is choosing to stylize. 
 Selectors can be the general names, ids, or classes. The general name would be like <em>p</em> for paragraph. An id is a name that can be given to a specific element in the HTML body so the coder can refer to that element as a selector. 
 It is written with a pound sign (#) and the name of the id. For example, an id with the name "intro_paragraph" would be #intro_paragraph in CSS. Finally, a class allows for multiple elements that you want to share the same CSS 
