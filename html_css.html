@@ -11,6 +11,7 @@
          }  
          table, th, td {border: 2px solid black;}
            table {border-collapse:collapse;
+           box-shadow:10px 10px 5px #888888;
            }
            td {padding:5px;}
           #divfortableofcontents {width:80%;
@@ -23,7 +24,7 @@
             font-family:"Arial";
             }
             #tim_picture {text-align:center;
-                margin-bottom:65px;
+                margin-bottom:63px;
             }
             #element_diagram {text-align:center;}
             #lie_picture {text-align:center;}
@@ -38,9 +39,11 @@
             }
             #tim_caption {margin-top:1px;}
             #htmldiagram_caption {margin-top:1px;}
-            #lie_caption {margin-top:1px;}
+            #lie_caption {margin-top:1px;
+                margin-bottom:60px;
+            }
             #cssdiagram_caption {margin-top:1px;
-                margin-bottom:64px;
+                margin-bottom:23px;
             }
             .table_title {font-size:25px;
             font-weight:bold;
@@ -55,10 +58,11 @@
             }
             #css_section {margin-top:40px;
             }
-            #html_background {margin-top:30px;
+            #html_background {margin-top:33px;
                 margin-bottom:55px;
             }
-            #html_tags_table {margin-bottom:30px;}
+            #css_table {margin-bottom:30px;}
+            #html_workings {height:442px;}
         </style>
     </head>
     <body>
@@ -96,7 +100,7 @@ it is called an element. Browsers read the elements as a whole to understand wha
 information for the browser to read about that tag's element. An example would be <em>width</em> for the image tag to change the dimensions of the image. Another attribute example is <em>align</em> for tables that changes whether a table 
 is aligned to the left, venter, or right. HTML document code is seperated by the <em>head</em> tag and the <em>body</em> tag. The <em>head</em> tag is where information about the webpage and CSS styling code is placed. The <em>body</em> 
 is where all of the visible content of the webpage is place so it can be seen on the actual page. Overall, tags and elements are the basis of HTML, telling the browser what to show on the webpage and being the structure of it.</p>
-<div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="500"> 
+<div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="430"> 
 <p id="htmldiagram_caption">A diagram labeling the structure of an HTML element.</p></div>
 <div id="tags_table"><p align="center" class="table_title">Examples of HTML Tags</p>
 <table align="center" id="html_tags_table">
@@ -145,7 +149,7 @@ is where all of the visible content of the webpage is place so it can be seen on
 and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer of Opera, a browser.
 He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996, CSS 1 was released 
 as the first version of the new style sheets for the World Wide Web. CSS is still used to customize the look of websites, creating unique looking websites with the same HTML code. </p>
-<div id="lie_picture"><img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" width="300">
+<div id="lie_picture"><img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" width="270">
 <p id="lie_caption">Hakon Wium Lie, the man who proposed CSS</p></div>
 <p><strong>How it works:</strong> CSS is coded in a similar manner to HTML but there are some differences. CSS code is placed inside the <em>style</em> tags inside the <em>head</em> tags at the top of the page. This tells the browser to read the code inside the 
 <em>style</em> tags in CSS instead of HTML. When it comes to writing the actual code, there are more differences. The first part of a line of code is the selector, which is just the name of the elements the coder is choosing to stylize. 
@@ -158,7 +162,7 @@ information. </p>
 <div id="css_diagram"><img src="http://mercury.tvu.ac.uk/~olivier/wds/session4/css_syntax.png" width="500">
 <p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div></div>
 <p class="table_title">Examples of CSS properties</p>
-<table>
+<table id="css_table">
     <thead>
     <tr>
         <th>Property</th>
