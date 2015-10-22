@@ -13,21 +13,23 @@
            table {border-collapse:collapse;
            box-shadow:10px 10px 5px #888888;
            }
-           td {padding:5px;}
+           td {padding:10px;}
           #divfortableofcontents {width:80%;
-              margin-left:15px;
+              margin-left:1%;
           }
            #tableofcontents {float:right;
-            height:110px;
+            height:2%;
             position:fixed;
-            right:30px;
+            right:2%;
             font-family:"Arial";
             }
             #tim_picture {text-align:center;
-                margin-bottom:63px;
+                margin-bottom:6%;
             }
             #element_diagram {text-align:center;}
-            #lie_picture {text-align:center;}
+            #lie_picture {text-align:center;
+            margin-bottom:-1.3%;
+            }
             #css_diagram {text-align:center;}
             h1 {font-size:50px;
                 text-align:center;
@@ -37,32 +39,42 @@
                 font-size:30px;
                 text-decoration:underline;
             }
-            #tim_caption {margin-top:1px;}
-            #htmldiagram_caption {margin-top:1px;}
-            #lie_caption {margin-top:1px;
-                margin-bottom:60px;
+            #tim_caption {margin-top:0.1%;}
+            #htmldiagram_caption {margin-top:0.1%;}
+            #lie_caption {margin-top:0.1%;
+                margin-bottom:8%;
             }
-            #cssdiagram_caption {margin-top:1px;
-                margin-bottom:23px;
+            #cssdiagram_caption {margin-top:0.1%;
+                margin-bottom:5%;
             }
             .table_title {font-size:25px;
             font-weight:bold;
-            margin-bottom:1px;
+            margin-bottom:0.1%;
             text-align:center;
             }
             p {text-indent:50px;}
             a:hover {background-color:yellow;}
             #html_section {width:50%;
                 float:left;
-                margin-right:20px;
+                margin-right:1%;
+                background-color: rgba(255, 255, 255, 0.6);
+                padding-left:1%;
+                padding-right:1%;
             }
-            #css_section {margin-top:40px;
+            #css_section {margin-top:2.7%;
+            background-color: rgba(0, 204, 102, 0.6);
+            margin-left:52%;
+            padding-right:2%;
             }
-            #html_background {margin-top:33px;
-                margin-bottom:55px;
+            #html_background {margin-top:4.3%;
+                margin-bottom:9.5%;
             }
-            #css_table {margin-bottom:30px;}
-            #html_workings {height:442px;}
+            #css_table {margin-bottom:7%;}
+            #html_workings {margin-bottom:8.2%;}
+            #css_background {margin-bottom:4%;}
+            #intro_paragraph {background-color: rgba(255, 0, 127, 0.6);
+                padding:2%;
+            }
         </style>
     </head>
     <body>
@@ -82,7 +94,7 @@
            </tbody>
            </table>
 <div id="divfortableofcontents"><h1>The Code Behind It All: HTML and CSS</h1>
-<p>Computers, like humans, use languages as instructions on what to do when it reads some lines of codes. Lines of code tell the browser how to put together the parts of the website (text, images, animations, etc.) so that the website is 
+<p id="intro_paragraph">Computers, like humans, use languages as instructions on what to do when it reads some lines of codes. Lines of code tell the browser how to put together the parts of the website (text, images, animations, etc.) so that the website is 
 structure in a specific way. They also tell the browser what content to put on the website so every user can see the same information. In this project, we used two types of coding language: HTML and CSS. We used HTML as a basic framework 
 of our website. It allowed us to put in the content of the website but not stylize it. On the other hand, CSS is the coding language that changes the format of the website to alter the appearance. This is how coders can take the same 
 website and truely make it their own; it is what allows for such a diverse visual range of websites on the internet. This webpage is an explination of these two languages and how they come together to shape websites such as this one.</p>
@@ -145,7 +157,7 @@ is where all of the visible content of the webpage is place so it can be seen on
     </tbody>
 </table></div></div>
 <div id="css_section"><h3>Cascading Style Sheets</h3>
-<p><strong>Background:</strong> The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
+<p id="css_background"><strong>Background:</strong> The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
 and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer of Opera, a browser.
 He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996, CSS 1 was released 
 as the first version of the new style sheets for the World Wide Web. CSS is still used to customize the look of websites, creating unique looking websites with the same HTML code. </p>
@@ -160,7 +172,7 @@ braces/ curly brackets ({ }). Inside these brackets is the CSS property (size, c
 paragraph shows the basic structure of a piece of CSS code. There is a large variety of CSS commands that allows for a diverse range of website designs. CSS is what distinguishes basic HTML form websites to creative centers of 
 information. </p>
 <div id="css_diagram"><img src="http://mercury.tvu.ac.uk/~olivier/wds/session4/css_syntax.png" width="500">
-<p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div></div>
+<p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div>
 <p class="table_title">Examples of CSS properties</p>
 <table id="css_table">
     <thead>
@@ -197,6 +209,6 @@ information. </p>
             <td>float: left;</td>
         </tr>
     </tbody>
-</table>
+</table></div>
      </body>
 </html>
