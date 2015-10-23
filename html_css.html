@@ -1,217 +1,307 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> </title>
-        <style>
-         body {background-image: url(http://www.hdwuz.com/wp-content/uploads/2015/10/blue_background_469_hd_cool.jpg);
-             background-attachment:fixed;
-             font-family:"Arial";
-             text-align:justify;
-                text-justify:inter-word;
-         }  
-         table, th, td {border: 2px solid black;}
-           table {border-collapse:collapse;
-           box-shadow:10px 10px 5px #888888;
-           }
-           td {padding:10px;}
-          #divfortableofcontents {width:80%;
-              margin-left:1%;
-          }
-           #tableofcontents {float:right;
-            height:2%;
-            position:fixed;
-            right:2%;
-            font-family:"Arial";
-            }
-            #tim_picture {text-align:center;
-                margin-bottom:6%;
-            }
-            #element_diagram {text-align:center;}
-            #lie_picture {text-align:center;
-            margin-bottom:-1.3%;
-            }
-            #css_diagram {text-align:center;
-            }
-            h1 {font-size:50px;
-                text-align:center;
-                text-decoration:underline
-            }
-            h2, h3 {text-align:center; 
-                font-size:30px;
-                text-decoration:underline;
-            }
-            #tim_caption {margin-top:0.1%;
-                margin-bottom:7.8%;
-            }
-            #htmldiagram_caption {margin-top:0.1%;}
-            #lie_caption {margin-top:0.1%;
-                margin-bottom:8%;
-            }
-            #cssdiagram_caption {margin-top:0.1%;
-                margin-bottom:10%;
-            }
-            .table_title {font-size:25px;
-            font-weight:bold;
-            margin-bottom:0.1%;
-            text-align:center;
-            }
-            p {text-indent:50px;}
-            a:hover {background-color:yellow;}
-            #html_section {width:50%;
-                float:left;
-                margin-right:1%;
-                background-color: rgba(255, 255, 255, 0.6);
-                padding-left:1%;
-                padding-right:1%;
-            }
-            #css_section {margin-top:2.7%;
-            background-color: rgba(0, 204, 102, 0.6);
-            margin-left:52%;
-            padding-right:3%;
-            }
-            #html_background {margin-top:4.3%;
-                margin-bottom:17%;
-            }
-            #css_table {margin-bottom:7%;}
-            #html_workings {margin-bottom:16%;}
-            #css_background {margin-bottom:4%;}
-            #intro_paragraph {background-color: rgba(255, 0, 127, 0.6);
-                padding:2%;
-            }
-        </style>
-    </head>
-    <body>
-         <table align="right" id="tableofcontents">
-            <thead>
-                <tr>
-                    <th>Table of Contents</th>
-                     </tr>
-            </thead>
-           <tbody>
-               <tr>
+
+<head>
+    <title> </title>
+    <style>
+        body {
+            background-image: url(http://www.hdwuz.com/wp-content/uploads/2015/10/blue_background_469_hd_cool.jpg);
+            background-attachment: fixed;
+            font-family: "Arial";
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+        
+        table {
+            border-collapse: collapse;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        
+        td {
+            padding: 10px;
+        }
+        
+        #divfortableofcontents {
+            width: 80%;
+            margin-left: 1%;
+        }
+        
+        #tableofcontents {
+            float: right;
+            height: 2%;
+            position: fixed;
+            right: 2%;
+            font-family: "Arial";
+        }
+        
+        #tim_picture {
+            text-align: center;
+            margin-bottom: 6%;
+        }
+        
+        #element_diagram {
+            text-align: center;
+        }
+        
+        #lie_picture {
+            text-align: center;
+            margin-bottom: -1.3%;
+        }
+        
+        #css_diagram {
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            text-decoration: underline
+        }
+        
+        h2,
+        h3 {
+            text-align: center;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+        
+        h2 {
+            margin-top: 3%;
+        }
+        #tim_caption {
+            margin-top: 0.1%;
+            margin-bottom: 7.8%;
+        }
+        
+        #htmldiagram_caption {
+            margin-top: 0.1%;
+        }
+        
+        #lie_caption {
+            margin-top: 0.1%;
+            margin-bottom: 8%;
+        }
+        
+        #cssdiagram_caption {
+            margin-top: 0.1%;
+            margin-bottom: 10%;
+        }
+        
+        .table_title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 0.1%;
+            text-align: center;
+        }
+        
+        p {
+            text-indent: 50px;
+        }
+        
+        a:hover {
+            background-color: yellow;
+        }
+        
+        #html_section {
+            width: 50%;
+            float: left;
+            margin-right: 1%;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        
+        /*#container{*/
+        /*    border: 2px solid black;*/
+        /*}*/
+        /*#container > div {*/
+        /*    display:inline-block;*/
+        /*}*/
+        
+        #css_section {
+            background-color: rgba(0, 204, 102, 0.4);
+            margin-left: 52%;
+            padding-right: 3%;
+        }
+        
+        #html_background {
+            margin-top: 6%;
+            margin-bottom: 17%;
+        }
+        
+        #css_table {
+            margin-bottom: 7%;
+        }
+        
+        #html_workings {
+            margin-bottom: 16.5%;
+        }
+        
+        #css_background {
+            margin-bottom: 4%;
+        }
+        
+        #intro_paragraph {
+            background-color: rgba(207, 0, 127, 0.4);
+            padding: 2%;
+            margin-bottom:3%;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="right" id="tableofcontents">
+        <thead>
+            <tr>
+                <th>Table of Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td><a href="index.html">Welcome</a></td>
-                 </tr>
-                  <tr>
+            </tr>
+            <tr>
                 <td><a href="html_css.html">What is HTML and CSS?</a></td>
-                 </tr>
-           </tbody>
-           </table>
-<div id="divfortableofcontents"><h1>The Code Behind It All: HTML and CSS</h1>
-<p id="intro_paragraph">Computers, like humans, use languages as instructions on what to do when it reads some lines of codes. Lines of code tell the browser how to put together the parts of the website (text, images, animations, etc.) so that the website is 
-structure in a specific way. They also tell the browser what content to put on the website so every user can see the same information. In this project, we used two types of coding language: HTML and CSS. We used HTML as a basic framework 
-of our website. It allowed us to put in the content of the website but not stylize it. On the other hand, CSS is the coding language that changes the format of the website to alter the appearance. This is how coders can take the same 
-website and truely make it their own; it is what allows for such a diverse visual range of websites on the internet. This webpage is an explination of these two languages and how they come together to shape websites such as this one.</p>
-<div id="html_section"><h2>Hypertext Markup Language</h2>
-<p id="html_background"><strong>Background:</strong> HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was created by computer 
-scientist Tim Berners-Lee in 1989 as the standard language of his new invention, the World Wide Web. He thought of HTML while working at CERN, the European Laboratory for Particle Physics, as a way for researchers to share their research 
-and work together on the Web. His idea was to link research papers together so scientists could cross-reference multiple documents at a time, which was the start of hypertext for the Web. Eventually, HTML became the main language for 
-programing websites on the Web and it still is to this day.</p>
-<div id="tim_picture"><img src="http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg" width="400">
-<p id="tim_caption">Tim Berners-Lee, Inventor of the World Wide Web and of HTML</p></div>
-<p id="html_workings"><strong>How it works:</strong> HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (<>). These brackets tell the browser that what is inside them is ment for the browser 
-to read, not display on the webpage. For example, a paragraph can be defined in HTML as a <em>p</em>. Some tags consist of a start tage and an end tag. The start tag is placed at the start of its content and the end tag closes the 
-content. The difference between them is that there is a forward slash (/) inside the brackets before the tag for the end tag that isn't present for the start tag. When refering to the start and end tags along with its content in between, 
-it is called an element. Browsers read the elements as a whole to understand what type of content it is and what it is. In addition, tags can be modified with attributes. Attributes are placed inside the start tag to add additional 
-information for the browser to read about that tag's element. An example would be <em>width</em> for the image tag to change the dimensions of the image. Another attribute example is <em>align</em> for tables that changes whether a table 
-is aligned to the left, venter, or right. HTML document code is seperated by the <em>head</em> tag and the <em>body</em> tag. The <em>head</em> tag is where information about the webpage and CSS styling code is placed. The <em>body</em> 
-is where all of the visible content of the webpage is place so it can be seen on the actual page. Overall, tags and elements are the basis of HTML, telling the browser what to show on the webpage and being the structure of it.</p>
-<div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="430"> 
-<p id="htmldiagram_caption">A diagram labeling the structure of an HTML element.</p></div>
-<div id="tags_table"><p align="center" class="table_title">Examples of HTML Tags</p>
-<table align="center" id="html_tags_table">
-    <thead>
-        <tr>
-            <th>General Form of Tag</th>
-              <th>Meaning</th>
-                <th>Specific Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>&ltem&gt</td>
-            <td>Italicizes the element's content</td>
-            <td>&ltem&gtCoding&lt/em&gt</td>
-        </tr>
-         <tr>
-            <td>&lth#&gt</td>
-            <td>Creates a header</td>
-            <td>&lth2&gt&lt/h2&gt</td>
-        </tr>
-         <tr>
-            <td>&ltli&gt</td>
-            <td>Adds an item to a list</td>
-            <td>&ltli&gtTrains&lt/li&gt</td>
-        </tr>
-         <tr>
-            <td>&ltbr&gt</td>
-            <td>Breaks the line, moving the rest of the text down to a new line</td>
-            <td>&ltbr&gt</td>
-        </tr>
-         <tr>
-            <td>&ltdiv&gt</td>
-            <td>Groups a section of the code together</td>
-            <td>&ltdiv&gt&lt/div&gt</td>
-        </tr>
-         <tr>
-            <td>&ltimg src&gt</td>
-            <td>Adds an image</td>
-            <td>&ltimg src="url"&gt</td>
-        </tr>
-    </tbody>
-</table></div></div>
-<div id="css_section"><h3>Cascading Style Sheets</h3>
-<p id="css_background"><strong>Background:</strong> The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements around, change colors, 
-and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer of Opera, a browser.
-He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996, CSS 1 was released 
-as the first version of the new style sheets for the World Wide Web. CSS is still used to customize the look of websites, creating unique looking websites with the same HTML code. </p>
-<div id="lie_picture"><img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" width="270">
-<p id="lie_caption">Hakon Wium Lie, the man who proposed CSS</p></div>
-<p><strong>How it works:</strong> CSS is coded in a similar manner to HTML but there are some differences. CSS code is placed inside the <em>style</em> tags inside the <em>head</em> tags at the top of the page. This tells the browser to read the code inside the 
-<em>style</em> tags in CSS instead of HTML. When it comes to writing the actual code, there are more differences. The first part of a line of code is the selector, which is just the name of the elements the coder is choosing to stylize. 
-Selectors can be the general names, ids, or classes. The general name would be like <em>p</em> for paragraph. An id is a name that can be given to a specific element in the HTML body so the coder can refer to that element as a selector. 
-It is written with a pound sign (#) and the name of the id. For example, an id with the name "intro_paragraph" would be #intro_paragraph in CSS. Finally, a class allows for multiple elements that you want to share the same CSS 
-manipulation to be grouped together. It has a similar CSS selector but the pound sign is replaced with a period (.). An example would be a class of "computer_parts" would be written .computer-parts. After the selector comes a set of 
-braces/ curly brackets ({ }). Inside these brackets is the CSS property (size, color, width, etc) followed by a colon (:). Then there is the value of that property ended with a semicolon (;). The following picture at the end of this 
-paragraph shows the basic structure of a piece of CSS code. There is a large variety of CSS commands that allows for a diverse range of website designs. CSS is what distinguishes basic HTML form websites to creative centers of 
-information. </p>
-<div id="css_diagram"><img src="http://mercury.tvu.ac.uk/~olivier/wds/session4/css_syntax.png" width="450">
-<p id="cssdiagram_caption">A diagram of the basic form of CSS code</p></div>
-<p class="table_title">Examples of CSS properties</p>
-<table id="css_table">
-    <thead>
-    <tr>
-        <th>Property</th>
-        <th>What It Does</th>
-        <th>Specific Example</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>background-color</td>
-            <td>Changes the background color</td>
-            <td>background-color: yellow;</td>
-        </tr>
-         <tr>
-            <td>font-family</td>
-            <td>Changes the type of font used</td>
-            <td>font-family: "Arial";</td>
-        </tr>
-         <tr>
-            <td>font-weight</td>
-            <td>Determines the thickness of the font</td>
-            <td>font-weight: bold;</td>
-        </tr>
-         <tr>
-            <td>font-decoration</td>
-            <td>Adds decorations such as underline to the text</td>
-            <td>font-decoration: underline;</td>
-        </tr>
-         <tr>
-            <td>float</td>
-            <td>Allows objects to wrap around other objects, such as text wrapped around an image</td>
-            <td>float: left;</td>
-        </tr>
-    </tbody>
-</table></div>
-     </body>
+            </tr>
+        </tbody>
+    </table>
+    <div id="divfortableofcontents">
+        <h1>The Code Behind It All: HTML and CSS</h1>
+        <p id="intro_paragraph">Computers, like humans, use languages as instructions on what to do when it reads some lines of codes. Lines of code tell the browser how to put together the parts of the website (text, images, animations, etc.) so that the website is structure
+            in a specific way. They also tell the browser what content to put on the website so every user can see the same information. In this project, we used two types of coding language: HTML and CSS. We used HTML as a basic framework of our website.
+            It allowed us to put in the content of the website but not stylize it. On the other hand, CSS is the coding language that changes the format of the website to alter the appearance. This is how coders can take the same website and truely make
+            it their own; it is what allows for such a diverse visual range of websites on the internet. This webpage is an explination of these two languages and how they come together to shape websites such as this one.</p>
+        <!--<div id="container" >-->
+        <div id="html_section">
+            <h2>Hypertext Markup Language</h2>
+            <p id="html_background"><strong>Background:</strong> HTML stands for Hypertext Markup Language. This means that it is a language that links to other texts together (hypertext) and tells the computer how to assemble the webpage's content (markup). This language was
+                created by computer scientist Tim Berners-Lee in 1989 as the standard language of his new invention, the World Wide Web. He thought of HTML while working at CERN, the European Laboratory for Particle Physics, as a way for researchers to
+                share their research and work together on the Web. His idea was to link research papers together so scientists could cross-reference multiple documents at a time, which was the start of hypertext for the Web. Eventually, HTML became the
+                main language for programing websites on the Web and it still is to this day.</p>
+            <div id="tim_picture"><img src="http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg" width="400">
+                <p id="tim_caption">Tim Berners-Lee, Inventor of the World Wide Web and of HTML</p>
+            </div>
+            <p id="html_workings"><strong>How it works:</strong> HTML works through a series of tags, which are labels that tells the browser what content can be classified as. They are placed in angled brackets (
+                <>). These brackets tell the browser that what is inside them is ment for the browser to read, not display on the webpage. For example, a paragraph can be defined in HTML as a <em>p</em>. Some tags consist of a start tage and an end tag.
+                    The start tag is placed at the start of its content and the end tag closes the content. The difference between them is that there is a forward slash (/) inside the brackets before the tag for the end tag that isn't present for the
+                    start tag. When refering to the start and end tags along with its content in between, it is called an element. Browsers read the elements as a whole to understand what type of content it is and what it is. In addition, tags can be
+                    modified with attributes. Attributes are placed inside the start tag to add additional information for the browser to read about that tag's element. An example would be <em>width</em> for the image tag to change the dimensions of the
+                    image. Another attribute example is <em>align</em> for tables that changes whether a table is aligned to the left, venter, or right. HTML document code is seperated by the <em>head</em> tag and the <em>body</em> tag. The <em>head</em>                    tag is where information about the webpage and CSS styling code is placed. The <em>body</em> is where all of the visible content of the webpage is place so it can be seen on the actual page. Overall, tags and elements are the basis
+                    of HTML, telling the browser what to show on the webpage and being the structure of it.</p>
+            <div id="element_diagram"><img src="http://evc-cit.info/cit040/screenshots/terminology.png" width="430">
+                <p id="htmldiagram_caption">A diagram labeling the structure of an HTML element.</p>
+            </div>
+            <div id="tags_table">
+                <p align="center" class="table_title">Examples of HTML Tags</p>
+                <table align="center" id="html_tags_table">
+                    <thead>
+                        <tr>
+                            <th>General Form of Tag</th>
+                            <th>Meaning</th>
+                            <th>Specific Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&ltem&gt</td>
+                            <td>Italicizes the element's content</td>
+                            <td>&ltem&gtCoding&lt/em&gt</td>
+                        </tr>
+                        <tr>
+                            <td>&lth#&gt</td>
+                            <td>Creates a header</td>
+                            <td>&lth2&gt&lt/h2&gt</td>
+                        </tr>
+                        <tr>
+                            <td>&ltli&gt</td>
+                            <td>Adds an item to a list</td>
+                            <td>&ltli&gtTrains&lt/li&gt</td>
+                        </tr>
+                        <tr>
+                            <td>&ltbr&gt</td>
+                            <td>Breaks the line, moving the rest of the text down to a new line</td>
+                            <td>&ltbr&gt</td>
+                        </tr>
+                        <tr>
+                            <td>&ltdiv&gt</td>
+                            <td>Groups a section of the code together</td>
+                            <td>&ltdiv&gt&lt/div&gt</td>
+                        </tr>
+                        <tr>
+                            <td>&ltimg src&gt</td>
+                            <td>Adds an image</td>
+                            <td>&ltimg src="url"&gt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="css_section"> <br>
+            <h3 style="margin-top:0;">Cascading Style Sheets</h3>
+            <p id="css_background"><strong>Background:</strong> The other language used to create my website is CSS, which stands for Cascading Style Sheets. This language doesn't change the content of a webpage but its visual appearance. It has the ability to move elements
+                around, change colors, and other properties (style sheet). "Cascading" is how CSS works by arranging parts of the webpage in different ways depending on the code. The idea of CSS was proposed by Hakon Wium Lie, the Chief Technology Officer
+                of Opera, a browser. He thought of the idea while working with Tim Berners-Lee at CERN. The goal of Lie's idea was to create a syle sheet that allowed web designers and developers to have more control when styling their websites. In 1996,
+                CSS 1 was released as the first version of the new style sheets for the World Wide Web. CSS is still used to customize the look of websites, creating unique looking websites with the same HTML code. </p>
+            <div id="lie_picture"><img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" width="270">
+                <p id="lie_caption">Hakon Wium Lie, the man who proposed CSS</p>
+            </div>
+            <p><strong>How it works:</strong> CSS is coded in a similar manner to HTML but there are some differences. CSS code is placed inside the <em>style</em> tags inside the <em>head</em> tags at the top of the page. This tells the browser to read
+                the code inside the
+                <em>style</em> tags in CSS instead of HTML. When it comes to writing the actual code, there are more differences. The first part of a line of code is the selector, which is just the name of the elements the coder is choosing to stylize.
+                Selectors can be the general names, ids, or classes. The general name would be like <em>p</em> for paragraph. An id is a name that can be given to a specific element in the HTML body so the coder can refer to that element as a selector.
+                It is written with a pound sign (#) and the name of the id. For example, an id with the name "intro_paragraph" would be #intro_paragraph in CSS. Finally, a class allows for multiple elements that you want to share the same CSS manipulation
+                to be grouped together. It has a similar CSS selector but the pound sign is replaced with a period (.). An example would be a class of "computer_parts" would be written .computer-parts. After the selector comes a set of braces/ curly brackets
+                ({ }). Inside these brackets is the CSS property (size, color, width, etc) followed by a colon (:). Then there is the value of that property ended with a semicolon (;). The following picture at the end of this paragraph shows the basic
+                structure of a piece of CSS code. There is a large variety of CSS commands that allows for a diverse range of website designs. CSS is what distinguishes basic HTML form websites to creative centers of information. </p>
+            <div id="css_diagram"><img src="http://mercury.tvu.ac.uk/~olivier/wds/session4/css_syntax.png" width="450">
+                <p id="cssdiagram_caption">A diagram of the basic form of CSS code</p>
+            </div>
+            <p class="table_title">Examples of CSS properties</p>
+            <table id="css_table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>What It Does</th>
+                        <th>Specific Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>background-color</td>
+                        <td>Changes the background color</td>
+                        <td>background-color: yellow;</td>
+                    </tr>
+                    <tr>
+                        <td>font-family</td>
+                        <td>Changes the type of font used</td>
+                        <td>font-family: "Arial";</td>
+                    </tr>
+                    <tr>
+                        <td>font-weight</td>
+                        <td>Determines the thickness of the font</td>
+                        <td>font-weight: bold;</td>
+                    </tr>
+                    <tr>
+                        <td>font-decoration</td>
+                        <td>Adds decorations such as underline to the text</td>
+                        <td>font-decoration: underline;</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>Allows objects to wrap around other objects, such as text wrapped around an image</td>
+                        <td>float: left;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--</div>-->
+    </div>
+</body>
+
 </html>
