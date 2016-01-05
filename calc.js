@@ -26,4 +26,16 @@ function doMath() {
         answer = parseInt(input1.value) / parseInt(input2.value);
         display.innerHTML = answer
     }
+    if  (dropdown.value == "^"){
+        answer = Math.pow (parseInt(input1.value), parseInt(input2.value));
+        display.innerHTML = answer
+    }
+    if  (dropdown.value == "sqrt"){
+        answer = Math.sqrt (parseInt(input1.value));
+        display.innerHTML = answer
+    }
+    if  (dropdown.value == "cbrt"){
+        answer = Math.cbrt (parseInt(input1.value));
+        display.innerHTML = answer
+    }
 }

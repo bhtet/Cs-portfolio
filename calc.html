@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+
+    </style>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<title>Document</title>
 </head>
 <body>
     
-<input type ="text" name="input1" style="width:50px;" id="input1">
+<p id="calc"><input type ="text" name="input1" style="width:50px;" id="input1">
     <select id="dropdown">
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="x">x</option>
         <option value="/">/</option>
+        <option value="^">^</option>
+        <option value="sqrt">sqrt</option>
+        <option value="cbrt">cbrt</option>
     </select>
     <input type ="text" name="input2" style="width:50px;" id="input2">
-    <input type="button" value="Calculate" id="submitButton" />
+    <input type="button" value="Calculate" id="submitButton" /></p>
 
-    <p>The answer is: <span id="display"></span></p>
+    <p id="answer">The answer to all your life problems: <span id="display"></span></p>
 <script src="calc.js" ></script>
 
 </body>
