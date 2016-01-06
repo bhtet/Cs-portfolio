@@ -9,7 +9,7 @@
               margin-top:17%;
      }
      #calc {position:relative;
-         left:42%;
+         left:17%;
          top:40px;
      }
      body {background-image:url("http://www.pageresource.com/wallpapers/wallpaper/math-backgrounds-for-powerpoint-wide.jpg");}
@@ -21,12 +21,58 @@
          font-size:25px;
          background-color:white;
      }
+     table, th, td {border:2px solid black;}
+     table {border-collapse:collapse;
+         background-color:white;
+         float:left;
+         margin-left:2%;
+         margin-top:1.2;
+     }
+     td {padding:5px;}
     </style>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<title>Document</title>
 </head>
 <body>
     <p id="instructions">When using this calculator for anything other than the addiion, subtraction, multiplication, division, or raising to an exponent, only place a number in the first box and leave the second box blank.</p>
+    <table id="meaningstable">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Meaning</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>+</td>
+        <td>Addition</td>
+        </tr>
+         <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        </tr>
+         <tr>
+        <td>x</td>
+        <td>Multiplication</td>
+        </tr>
+         <tr>
+        <td>/</td>
+        <td>Division</td>
+        </tr>
+         <tr>
+        <td>^</td>
+        <td>Raising the first number to the power of the second number</td>
+        </tr>
+         <tr>
+        <td>sqrt</td>
+        <td>Square root of the first number</td>
+        </tr>
+         <tr>
+        <td>cbrt</td>
+        <td>Cube root of the first number</td>
+        </tr>
+    </tbody>
+</table>
 <p id="calc"><input type ="text" name="input1" style="width:100px;" id="input1">
     <select id="dropdown">
         <option value="+">+</option>
