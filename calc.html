@@ -2,14 +2,32 @@
 <html>
 <head>
     <style>
-
+     #answer {color:black;
+              text-align:center;
+              font-size:40px;
+              font-family:monospace;
+              margin-top:17%;
+     }
+     #calc {position:relative;
+         left:42%;
+         top:40px;
+     }
+     body {background-image:url("http://www.pageresource.com/wallpapers/wallpaper/math-backgrounds-for-powerpoint-wide.jpg");}
+     #smot {margin-right:23%;
+     float:right;
+     width:300px;
+     }
+     #instructions {text-align:center;
+         font-size:25px;
+         background-color:white;
+     }
     </style>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<title>Document</title>
 </head>
 <body>
-    
-<p id="calc"><input type ="text" name="input1" style="width:50px;" id="input1">
+    <p id="instructions">When using this calculator for anything other than the addiion, subtraction, multiplication, or division, only place a number in the first box and leave the second box blank.</p>
+<p id="calc"><input type ="text" name="input1" style="width:100px;" id="input1">
     <select id="dropdown">
         <option value="+">+</option>
         <option value="-">-</option>
@@ -19,8 +37,9 @@
         <option value="sqrt">sqrt</option>
         <option value="cbrt">cbrt</option>
     </select>
-    <input type ="text" name="input2" style="width:50px;" id="input2">
-    <input type="button" value="Calculate" id="submitButton" /></p>
+    <input type ="text" name="input2" style="width:100px;" id="input2">
+    <input type="button" value="Calculate" id="submitButton"></p>
+    <img src="https://40.media.tumblr.com/105a8e3cd42f967999e0469b502ca04c/tumblr_inline_nuoax6JvYk1rlpr76_540.jpg" id="smot">
 
     <p id="answer">The answer to all your life problems: <span id="display"></span></p>
 <script src="calc.js" ></script>
