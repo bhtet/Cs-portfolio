@@ -2,39 +2,42 @@
 <html>
 <head>
     <style>
-     #answer {color:black;
+    #title {text-align:center;
+        font-size:40px;
+    }
+     #answer {position:relative;
+         color:black;
               text-align:center;
-              font-size:40px;
+              font-size:25px;
               font-family:monospace;
               margin-top:17%;
      }
      #calc {position:relative;
-         left:17%;
-         top:40px;
+         left:2%;
+         margin-top:10%;
      }
-     body {background-image:url("http://www.pageresource.com/wallpapers/wallpaper/math-backgrounds-for-powerpoint-wide.jpg");}
-     #smot {margin-right:23%;
+     body {background-image:url("http://www.pulsarwallpapers.com/data/media/3/Alien%20Ink%202560X1600%20Abstract%20Background.jpg");}
+     #smot {
+         margin-right:8%;
      float:right;
-     width:300px;
-     }
-     #instructions {text-align:center;
-         font-size:25px;
-         background-color:white;
+     width:25%;
+     position:relative;
+     top:-120px;
      }
      table, th, td {border:2px solid black;}
      table {border-collapse:collapse;
          background-color:white;
          float:left;
          margin-left:2%;
-         margin-top:1.2;
+         margin-top:1.5%;
      }
      td {padding:5px;}
     </style>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<title>Document</title>
+	<title>1337 Calc</title>
 </head>
 <body>
-    <p id="instructions">When using this calculator for anything other than the addiion, subtraction, multiplication, division, or raising to an exponent, only place a number in the first box and leave the second box blank.</p>
+    <p id="title">1337 Calculator</p>
     <table id="meaningstable">
     <thead>
         <tr>
@@ -65,15 +68,19 @@
         </tr>
          <tr>
         <td>sqrt</td>
-        <td>Square root of the first number</td>
+        <td>Square root of the first number. Only use first box</td>
         </tr>
          <tr>
         <td>cbrt</td>
-        <td>Cube root of the first number</td>
+        <td>Cube root of the first number. Only use first box</td>
+        </tr>
+         <tr>
+        <td>nthrt</td>
+        <td>Finds the nth root of the first number. Doesn't always give the right answer</td>
         </tr>
     </tbody>
 </table>
-<p id="calc"><input type ="text" name="input1" style="width:100px;" id="input1">
+<div id="calc"><input type ="text" name="input1" style="width:100px;" id="input1">
     <select id="dropdown">
         <option value="+">+</option>
         <option value="-">-</option>
@@ -82,12 +89,13 @@
         <option value="^">^</option>
         <option value="sqrt">sqrt</option>
         <option value="cbrt">cbrt</option>
+        <option value="nthrt">nthrt</option>
     </select>
     <input type ="text" name="input2" style="width:100px;" id="input2">
     <input type="button" value="Calculate" id="submitButton"></p>
-    <img src="https://40.media.tumblr.com/105a8e3cd42f967999e0469b502ca04c/tumblr_inline_nuoax6JvYk1rlpr76_540.jpg" id="smot">
+    <img src="http://cdn.niketalk.com/e/ed/edabc52c_OfPEnFZ.gif" id="smot">
 
-    <p id="answer">The answer to all your life problems: <span id="display"></span></p>
+    <p id="answer">The answer to all your life problems: <span id="display"></span></div>
 <script src="calc.js" ></script>
 
 </body>

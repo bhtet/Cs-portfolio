@@ -38,4 +38,8 @@ function doMath() {
         answer = Math.cbrt (parseInt(input1.value));
         display.innerHTML = answer
     }
+    if  (dropdown.value == "nthrt"){
+        answer = Math.pow (parseInt(input1.value), 1/parseInt(input2.value));
+        display.innerHTML = answer
+    }
 }
