@@ -1,134 +1,206 @@
 <!DOCTYPE HTML>
 <html>
-    <style>
-        body {background:url("http://theartmad.com/wp-content/uploads/2015/09/Ocean-Background-5.jpg");}
-        #title {text-align:center;
-            font-size:40px;
-            font-family:monospace;
-            margin-top:1%;
-            font-weight:bold;
-        }
-        
-        #sampsoninfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:25px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #clemsoninfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:25px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #nicholasinfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:24px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #farragutinfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:24px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #mahaninfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:24px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #bensoninfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:24px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #fletcherinfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:24px;
-        margin-left:-27%;
-        padding:1%;
-        }
-        #gearinginfo {float:right;
-        margin-top:27%;
-        position:absolute;
-        background-color:rgba(255,255,255,0);
-        font-size:21px;
-        margin-left:-26%;
-        padding:1%;
-        }
-        div {display:inline-block;
-            z-index:2;
-        }
-        img {float:right;
-        }
-        #rectangle {background-color:rgba(255,255,255,0.7);
-            width:845px;
-            height:340px;
-            position:absolute;
-            margin-top:0.5%;
-            margin-left:0.5%;
-            z-index:1;
-        }
-        #wows1 {margin-top:-5%;
-        margin-left:5%;
-            position:absolute;
-            width:150px;
-        }
-        #wows2 {margin-top:-5%;
-        margin-left:87%;
-            position:absolute;
-            width:150px;}
-    </style>
+<style>
+    body {
+        background: url("http://theartmad.com/wp-content/uploads/2015/09/Ocean-Background-5.jpg");
+    }
+    
+    #title {
+        text-align: center;
+        font-size: 40px;
+        font-family: monospace;
+        margin-top: 1%;
+        font-weight: bold;
+    }
+    
+    #tableofcontents {
+        float: right;
+        height: 2%;
+        position: fixed;
+        right: 2%;
+        font-family: "Arial";
+        margin-right: -1.7%;
+        margin-top: 5%;
+    }
+    
+    table {
+        border-collapse: collapse;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    
+    th,
+    td {
+        border: 2px solid black;
+        padding: 10px;
+    }
+    
+    #sampsoninfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 25px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 3;
+    }
+    
+    #clemsoninfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 25px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 4;
+    }
+    
+    #nicholasinfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 24px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 5;
+    }
+    
+    #farragutinfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 24px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 6;
+    }
+    
+    #mahaninfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 24px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 7;
+    }
+    
+    #bensoninfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 24px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 8;
+    }
+    
+    #fletcherinfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 24px;
+        margin-left: -27%;
+        padding: 1%;
+        z-index: 9;
+    }
+    
+    #gearinginfo {
+        float: right;
+        margin-top: 27%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 21px;
+        margin-left: -26%;
+        padding: 1%;
+        z-index: 10;
+    }
+    
+    div {
+        display: inline-block;
+        z-index: 2;
+    }
+    
+    img {
+        float: right;
+    }
+    
+    #rectangle {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 845px;
+        height: 340px;
+        position: absolute;
+        margin-top: 0.5%;
+        margin-left: 0.5%;
+        z-index: 1;
+    }
+    
+    #wows1 {
+        margin-top: -5%;
+        margin-left: 5%;
+        position: absolute;
+        width: 150px;
+    }
+    
+    #wows2 {
+        margin-top: -5%;
+        margin-left: 87%;
+        position: absolute;
+        width: 150px;
+    }
+</style>
+
 <head>
     <title>US Navy Destroyers from WoWs</title>
 </head>
+<table align="right" id="tableofcontents">
+    <thead>
+        <tr>
+            <th>Table of Contents</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="index.html">Welcome</a></td>
+        </tr>
+        <tr>
+            <td><a href="html_css.html">What is HTML and CSS?</a></td>
+        </tr>
+        <tr>
+            <td><a href="calc.html">Calculator</a></td>
+        </tr>
+        <tr>
+            <td><a href="info.html">Info Site</a></td>
+        </tr>
+    </tbody>
+</table>
+
 <body>
-   <p id="title">US Navy Destroyers from World of Warships In-Game Performance</p>
-   <img src="http://wiki.gcdn.co/images/d/d7/GameLogo_World_of_Warships.png" id="wows1">
-   <img src="http://wiki.gcdn.co/images/d/d7/GameLogo_World_of_Warships.png" id="wows2">
-     <div id="sampson">
-         <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Sampson.jpg">
-    </div>
-    <div id="clemson">
-         <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Clemson.jpg">
-    </div>
-    <div id="nicholas">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Destroyer-Leader.jpg">
-    </div>
-      <div id="sampsoninfo"></div> <div id="clemsoninfo"></div> <div id="nicholasinfo"></div> <div id="farragutinfo"></div> <div id="mahaninfo"></div> <div id="bensoninfo"></div> <div id="fletcherinfo"></div> <div id="gearinginfo"></div>
-    <div id="farragut">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Farragut.jpg">
-    </div>
-    <div id="mahan">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Mahan.jpg">
-    </div>
-    <div id="benson">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Benson.jpg">
-    </div>
-    <div id="fletcher">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Fletcher.jpg">
-    </div>
-    <div id="gearing">
-        <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Gearing.jpg">
-    </div>
-     <div id="rectangle"></div>
+    <p id="title">US Navy Destroyers from World of Warships In-Game Performance</p> <img src="http://wiki.gcdn.co/images/d/d7/GameLogo_World_of_Warships.png" id="wows1"> <img src="http://wiki.gcdn.co/images/d/d7/GameLogo_World_of_Warships.png" id="wows2">
+    <div id="sampson"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Sampson.jpg"> </div>
+    <div id="clemson"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Clemson.jpg"> </div>
+    <div id="nicholas"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Destroyer-Leader.jpg"> </div>
+    <div id="sampsoninfo" class="info"></div>
+    <div class="info" id="clemsoninfo"></div>
+    <div class="info" id="nicholasinfo"></div>
+    <div class="info" id="farragutinfo"></div>
+    <div class="info" id="mahaninfo"></div>
+    <div class="info" id="bensoninfo"></div>
+    <div class="info" id="fletcherinfo"></div>
+    <div class="info" id="gearinginfo"></div>
+    <div id="farragut"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Farragut.jpg"> </div>
+    <div id="mahan"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Mahan.jpg"> </div>
+    <div id="benson"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Benson.jpg"> </div>
+    <div id="fletcher"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Fletcher.jpg"> </div>
+    <div id="gearing"> <img src="http://blog.worldofwarships.eu/wp-content/uploads/sites/5/2015/01/Gearing.jpg"> </div>
+    <div id="rectangle"></div>
     <script src="info.js"></script>
 </body>
+
 </html>
