@@ -8,7 +8,7 @@ var dropdown = document.getElementById("dropdown");
 // When the Calculate button for the calculator is clicked on, the function "doMath" is called. This function is what tells the calculator what operation to perform depending on the operation selected in the drop down menu. 
 button.addEventListener("click", doMath);
 
-// This is the function housing all of the mathematical operations for the calculator to perform. 
+// This is the function housing all of the mathematical operations for the calculator to perform. "parseInt(input1.value)" is the value in the left box of the calculator and "parseInt(input2.value)" is that value from the right box. 
 function doMath() {
     // If the calculator is told to perform addition, then it will add the two values in the input boxes to give out an answer. 
     if  (dropdown.value == "+"){
