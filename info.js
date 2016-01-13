@@ -1,20 +1,20 @@
 // Takes the elements with the same ids from Info.html and fills them in for the variables in the Javascript 
 var sampson = document.getElementById("sampson");
-var sampsonInfo = document.getElementById("sampsonInfo");
+var sampsonInfo = document.getElementById("sampsoninfo");
 var clemson = document.getElementById("clemson");
-var clemsonInfo = document.getElementById("clemsonInfo");
+var clemsonInfo = document.getElementById("clemsoninfo");
 var nicholas = document.getElementById("nicholas");
-var nicholasInfo = document.getElementById("nicholasInfo");
+var nicholasInfo = document.getElementById("nicholasinfo");
 var farragut = document.getElementById("farragut");
-var farragutInfo = document.getElementById("farragutInfo");
+var farragutInfo = document.getElementById("farragutinfo");
 var mahan = document.getElementById("mahan");
-var mahanInfo = document.getElementById("mahanInfo");
+var mahanInfo = document.getElementById("mahaninfo");
 var benson = document.getElementById("benson");
-var bensonInfo = document.getElementById("bensonInfo");
+var bensonInfo = document.getElementById("bensoninfo");
 var fletcher = document.getElementById("fletcher");
-var fletcherInfo = document.getElementById("fletcherInfo");
+var fletcherInfo = document.getElementById("fletcherinfo");
 var gearing = document.getElementById("gearing");
-var gearingInfo = document.getElementById("gearingInfo");
+var gearingInfo = document.getElementById("gearinginfo");
 
 // This function makes it so when the Sampson image is clicked, the previous ship information is removed and then replaced with the Sampson's information. The other ship information is set to nothing and only the Sampson's info has content. The other info is present but can't be seen because there is nothing for them to display.
 sampson.addEventListener("click", function() {
