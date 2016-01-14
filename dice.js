@@ -15,9 +15,9 @@ var answer3;
 var answer4;
 var dropDown = document.getElementById("dropdownbox");
 var diceType = document.getElementById("dropdowndicetype");
-var sumDropDown = document.getElementById("dropdownsum");
+var mathDropDown = document.getElementById("mathdropdown");
 var sumanswer = document.getElementById("sumspan");
-var uSmot = document.getElementById("smotimg");
+
 
 button.addEventListener("click", rollDie);
 
@@ -155,7 +155,10 @@ function rollDie(){
         result4.innerHTML = answer4;
     }
     
-    if (sumDropDown.value == "yes"){
+    if (mathDropDown.value == "findsum"){
         sumanswer.innerHTML = "Sum:" + " " + (answer1 + answer2 + answer3 +answer4);
+    }
+    else {
+         sumanswer.innerHTML = "";
     }
 }

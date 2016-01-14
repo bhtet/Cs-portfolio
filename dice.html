@@ -85,7 +85,7 @@
             margin-left:55%;
             margin-top:-7%;
         }
-        #dropdownsum {position:absolute;
+        #mathdropdown {position:absolute;
             margin-top:23%;
             font-size:25px;
             margin-left:-22%;
@@ -105,6 +105,27 @@
             margin-top:-18%;
             margin-left:57%;
         }
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+        
+        table {
+            border-collapse: collapse;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+         #tableofcontents {
+             position:absolute;
+             margin-top:-44%;
+             margin-left:87%;
+        }
+        body {background-color:rgb(255, 255, 51);}
     </style>
 <head>
     <title>Dice Rolling Simulator 2016</title>
@@ -137,9 +158,9 @@
         <option value="twelve">Twelve-Sided Dice</option>
     </select>
     
-    <select id="dropdownsum">
+    <select id="mathdropdown">
         <option value="no">No, I can do math</option>
-        <option value="yes">Yes, I'm a math noob</option>
+        <option value="findsum">Yes, I'm a math noob</option>
     </select>
     
     <p id="sum"> <span id="sumspan"></span> </p>
@@ -152,6 +173,31 @@
     <p id="numbertext">Number of Dice</p>
     <p id="typetext">Type of Dice</p>
     <p id="sumtext">Find the Sum?</p>
+    
+    <table align="right" id="tableofcontents">
+        <thead>
+            <tr>
+                <th>Table of Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="index.html">Welcome</a></td>
+            </tr>
+            <tr>
+                <td><a href="html_css.html">What is HTML and CSS?</a></td>
+            </tr>
+            <tr>
+                <td><a href="calc.html">Calculator</a></td>
+            </tr>
+            <tr>
+                <td><a href="info.html">Info Site</a></td>
+            </tr>
+            <tr>
+                <td><a href="dice.html">Dice Rolling Simulator</a></td>
+            </tr>
+        </tbody>
+    </table>
     
     <script src="dice.js"></script>
 </body>
