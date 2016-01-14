@@ -10,11 +10,12 @@
             margin-left:25%;
             font-size:40px;
             margin-top:-7%;
+            width:50%;
         }
         #rollbutton {position:absolute;
-            margin-left:-51%;
+            margin-left:-54%;
             margin-top:23%;
-            font-size:30px;
+            font-size:25px;
             z-index:3;
         }
         #diceimage {
@@ -25,22 +26,30 @@
             z-index:4;
         }
         #dropdownbox {position:absolute;
-            font-size:30px;
+            font-size:25px;
             margin-top:23%;
-            margin-left:-30%;
+            margin-left:-42%;
             z-index:5;
         }
-        #result1 {
-            margin-left:2%;
+        #result1 {position:absolute;
+            margin-left:-40.5%;
+            margin-top:32%;
+            font-size:40px;
             }
-        #result2 {
-            margin-left:10%;
+        #result2 {position:absolute;
+            margin-left:-36%;
+            margin-top:32%;
+            font-size:40px;
             }
-        #result3 {
-            margin-left:10%;
+        #result3 {position:absolute;
+            margin-left:-31.5%;
+            margin-top:32%;
+            font-size:40px;
             }
-        #result4 {
-            margin-left:10%;
+        #result4 {position:absolute;
+            margin-top:32%;
+            margin-left:-27%;
+            font-size:40px;
             }
         #title {
             text-align:center;
@@ -57,14 +66,44 @@
             font-size:20px;
         }
         #die3 {position:absolute;
-            margin-left:43%;
+            margin-left:43.5%;
             margin-top:-10%;
             font-size:20px;
         }
         #die4 {position:absolute;
-            margin-left:47%;
+            margin-left:48%;
             margin-top:-10%;
             font-size:20px;
+        }
+        #dropdowndicetype {position:absolute;
+            font-size:25px;
+            margin-left:-36%;
+            margin-top:23%;
+        }
+        #sum {position:absolute;
+            font-size:40px;
+            margin-left:55%;
+            margin-top:-7%;
+        }
+        #dropdownsum {position:absolute;
+            margin-top:23%;
+            font-size:25px;
+            margin-left:-22%;
+        }
+        #numbertext {position:absolute;
+            margin-top:-18%;
+            font-size:20px;
+            margin-left:32%;
+        }
+        #typetext {position:absolute;
+            font-size:20px;
+            margin-top:-18%;
+            margin-left:44%;
+        }
+        #sumtext {position:absolute;
+            font-size:20px;
+            margin-top:-18%;
+            margin-left:57%;
         }
     </style>
 <head>
@@ -74,23 +113,45 @@
     <p id="title">Dice Rolling Simulator 2016</p>
     <canvas id="mycanvas" width="1000px" height="700px" style="border: 2px solid black"></canvas>
     
-    <p id="outcome">Outcomes: <span id="result1"></span> <span id="result2"></span> <span id="result3"></span> <span id="result4"></span></p>
+    <p id="outcome">Outcomes:</p>
     
     <input type="button" value="Anotha Roll" id="rollbutton">
     
     <img src="http://images.clipartpanda.com/1-dice-clipart-yikpbxkiE.png" id="diceimage">
     
     <select id="dropdownbox">
-        <option value="1"># of Die: 1</option>
-        <option value="2"># of Die: 2</option>
-        <option value="3"># of Die: 3</option>
-        <option value="4"># of Die: 4</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
     </select>
     
     <p id="die1">Die 1</p>
     <p id="die2">Die 2</p>
     <p id="die3">Die 3</p>
     <p id="die4">Die 4</p>
+    
+    <select id="dropdowndicetype">
+        <option value="six">Six-Sided Dice</option>
+        <option value="eight">Eight-Sided Dice</option>
+        <option value="twelve">Twelve-Sided Dice</option>
+    </select>
+    
+    <select id="dropdownsum">
+        <option value="no">No, I can do math</option>
+        <option value="yes">Yes, I'm a math noob</option>
+    </select>
+    
+    <p id="sum"> <span id="sumspan"></span> </p>
+    
+    <span id="result1"></span> 
+    <span id="result2"></span> 
+    <span id="result3"></span> 
+    <span id="result4"></span>
+    
+    <p id="numbertext">Number of Dice</p>
+    <p id="typetext">Type of Dice</p>
+    <p id="sumtext">Find the Sum?</p>
     
     <script src="dice.js"></script>
 </body>
