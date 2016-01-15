@@ -1,6 +1,7 @@
 var mycanvas = document.getElementById("mycanvas");
 var ctx = mycanvas.getContext("2d");
 
+// These variables contain the information that the functions further down will use. Most of them find the element of the same id in the HTML document and use that as the data.
 var diceValues = [1, 2, 3, 4, 5, 6];
 var diceValues8Sided = [1, 2, 3, 4, 5, 6, 7, 8];
 var diceValues12Sided = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -18,11 +19,12 @@ var diceType = document.getElementById("dropdowndicetype");
 var mathDropDown = document.getElementById("mathdropdown");
 var sumanswer = document.getElementById("sumspan");
 
-
+// This tells the program to initiate the function to roll the die when the roll button is clicked. 
 button.addEventListener("click", rollDie);
 
+// The main function that tells the program what to do depending on the combination of the amount of die and the type of die selected. It works by only selecting a random number based on the amount of die picked. The rest of the answers are left blank so they are cleared by the program. For example, if you roll 4 die and then roll 2 the second time, the first time will give 4 results. In the second roll, only 2 results are shown and the other 2 results are cleared. 
 function rollDie(){
-    
+
     if (dropDown.value == "1" && diceType.value == "six"){
     answer1= diceValues[Math.floor(Math.random()*diceValues.length)];
     answer2= "";
@@ -154,7 +156,7 @@ function rollDie(){
         result3.innerHTML = answer3;
         result4.innerHTML = answer4;
     }
-    
+    // If the sum feature is enabled, then the sum is displaed. If it is turned off, however, then the "Sum:" text won't show up, giving no indication of the feature. 
     if (mathDropDown.value == "findsum"){
         sumanswer.innerHTML = "Sum:" + " " + (answer1 + answer2 + answer3 +answer4);
     }
