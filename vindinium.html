@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        p {
+            text-indent:50px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+        
+        table {
+            border-collapse: collapse;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+         #tableofcontents {
+            float: right;
+            height: 2%;
+            position: fixed;
+            right: 2%;
+            font-family: "Arial";
+        }
+        
+        #divfortableofcontents {
+            font-family: "Arial";
+            width: 80%;
+            margin-left: 1%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        h1, h2, h3, h4, h5, h6, h7 {
+            font-family:"Arial";
+            text-decoration:underline;
+            font-size:30px;
+            font-weight:bold;
+        }
+       
+        #title {
+            font-family:"Arial";
+            text-decoration:underline;
+            text-align:center;
+            font-size:40px;
+            font-weight:bold;
+        }
+        
+        #vindi_intro {
+            text-align:center;
+        }
+        #coding_section {
+            text-align:center;
+        }
+        
+         #divfortableofcontents {
+            font-family: "Arial";
+            width: 80%;
+            margin-left: 1%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        img {
+            padding:5%;
+        }
+        
+        .codediv {
+            background-color:white;
+            padding: 2%;
+        }
+        
+        body {
+            background-image:url("http://img.wallpaper.sc/desktop/images/5k/desktop-pc-5120x2880-wallpaper_00019.jpg");
+        }
+        #intro_div {
+         background-color:rgb(102, 255, 102);  
+         padding: 2%;
+        }
+        #code_intro_div {
+            background-color:yellow;
+            padding:2%;
+        }
+        #decisions_div {
+        background-color:rgb(255, 102, 255);    
+        padding:2%;
+        }
+        #taverns_div {
+            background-color:rgb(102, 255, 255);
+            padding:2%;
+        }
+        #freemines_div {
+            background-color:rgb(192, 192, 192);
+            padding:2%;
+        }
+        #attack_div {
+            background-color:rgb(255, 51, 51);
+            padding:2%;
+        }
+        #reflection_div {
+        background-color:rgb(255, 153, 51);
+        padding:2%;
+        }
+        
+        </style>
+        <title>Vindinium</title>
+    </head>
+    <body>
+        
+         <table align="right" id="tableofcontents">
+        <thead>
+            <tr>
+                <th>Table of Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="index.html">Welcome</a></td>
+            </tr>
+            <tr>
+                <td><a href="html_css.html">What is HTML and CSS?</a></td>
+            </tr>
+            <tr>
+                <td><a href="calc.html">Calculator</a></td>
+            </tr>
+            <tr>
+                <td><a href="info.html">Info Site</a></td>
+            </tr>
+            <tr>
+                <td><a href="dice.html">Dice Rolling Simulator</a></td>
+            </tr>
+            <tr>
+                <td><a href="vindinium.html">Vindinium AI Coding</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div id="divfortableofcontents">
+        <p id="title">Vindinium AI Programming</p>
+        <center><img src="http://stratosprovatopoulos.com/wp-content/uploads/2014/02/screenshot.png" id="vindi_image"></center>
+        
+       <div id="intro_div"><h1 id="vindi_intro"> What is Vindinium?</h1>
+        
+        <p id="vindi_info"> Vindinium is an interesting and unique game. Unlike most games where a player controls their character, the characters are controlled by a string of commands that instructs it. Skill for this game comes in the form
+        of the ability to program AI in a programing language. The gameplay itself is relatively simple. Each player controls one bot, refered to as a "hero." This hero travereses a randomly generated map to capture mines and gain gold. They are
+        also able to steal the mines of the other 3 players. When a hero's health is low, they can go to taverns to spend gold and heal health. The taverns come in handy because the 4 heroes can attack each other and also lose 1 point of health
+        for every move they make. The game is turn-based and lasts for 1200 turns, 300 turns for each player. While it is a simple game, it can quickly turn competative with an elo-based rating system and leaderboards. Programmers can personalize
+        the behavior of their bots. Some people will make aggressive attack bots. Others will make passive mine stealers. Others will make tavern camping bots to make them almost indestructible. There are many possiblities for the AI programming. 
+        For my specific bot, I decided to make a bot that takes unowned mines first, then camps the tavern so it rarely dies. Below is an explination of the major portions of my code that I used to make my bot.</p></div>
+        
+        <div id="code_intro_div"><h2 id="coding_section">The Code</h2>
+        
+        <p id="code_intro">The code for my progrmming my bot AI consists of three main parts. The first part is the global data section. This is where the bot has code that allows it to assess the state of the game and its surroundings, such as 
+        how many unowned mines there are, where the nearest tavern is, and where the closest player is. The second part is the WHAT section. This is where the bot does the actual decision making on what to do depending on the parameters set for 
+        each decision. It may decide to go to a tavern because it is low on health or maybe it will attack a player because it is within four units of it. Situations where the bot doesn't do what it should be doing are usually faults with the code in this
+        section. The parameters need to be specific and not overlap each other or else the bot will get confused and be ineffective at the game. The final section is the HOW section. By now, the bot has picked a decision to make but now it must 
+        carry out that decision. The code in this section tells the bot what to do for the decision it made. For example, if the bot picks to go to the closest tavern, the code in the HOW section will change its path to the closest tavern so it goes
+        there. Below is an explination about how the code works and how it is able to make my bot do its main functions. </p></div>
+        
+        <div id="decisions_div"><center><h3>The Decision Making</h3></center>
+        
+        <div class="codediv"><pre><code id="code_decisions"> 
+        if (bot.yourBot.life < 60 || bot.yourBot.mineCount > 5) {
+            task = "tavern";
+        }
+        else if (bot.data.game.turn < 10 || bot.freeMines > 0) {
+            task = "freemines";
+        }
+        else {
+            task = "attack";
+        }</code></pre></div>
+        
+        <p id="decisions_explination"> This is an important piece of code that tells the bot what to do depending on the situation. The format of this code is the if, else if, and else statement. This tells the bot to see if the parameters for the 
+        if statement are true. If it is, the the code inside the if statement is ran. If not, then the bot goes down to the else if statement and does the same process. If none of the if or else if statements can be ran, then the code for the else statement is ran. 
+        For this code, the if statement has the parameters of "(bot.yourBot.life < 60 || bot.yourBot.mineCount > 5)." The parameters are saying that the bot should chose to execute the command inside the if statement if its health is lower than 60
+        hitpoints or, as indicated by the "||," if it has control of 5 or more mines. These parameters are instructed by "bot.yourBot.life < 60" and "bot.yourBot.mineCount > 5" respectively. The code inside this if statement is "task = 'tavern.'"
+        A task is the choice that the bot made and it will be instructed to do different actions depending on the task. The task for this case is "taverns," meaning that the bot will use the taverns task to go heal itself.  Furthermore, the condition telling
+        the bot to go to the tavern if it has more than 5 mines is the code for my bot's feature of tavern camping. This is where the bot sits at the tavern and heals itself if its health is low. By healing itself repeadtedly, it will rarely die. The reason why it needs some
+        mines is to generate gold for itself so it can actually pay for the tavern. After the if statement is the else statement. The conditions for this statement is that is the gaame is under 10 turns or there are more than 0 free mines 
+        in the game. If one of these conditions are true, then the bot will initiate the task of "freemines." This task tells my bot to go take free mines for iself. Finally, the else statement is attack. There are no conditionals for it because
+        it is only initiated if none of the conditions for the other statements are true. The reason why attack is last is because it has a niche role for my bot. Idealy, if my bot doesn't have enough mines to tavern camp and there are no free mines left
+        for it to take, then my bot will attack the richest player in an attempt to steal mines. After that, it should have enough to tavern camp. The code for my attacking task will be explained later on. </p></div>
+        
+        <div id="taverns_div"><center><h4>Going to the Taverns</h4></center>
+        
+        <div class="codediv"><pre><code id="code_taverns">
+            if (task === "tavern") {
+             var closesttavern = bot.taverns[0];
+             for (i = 0; i < bot.taverns.length; i++) {
+                if(bot.findDistance(myPos, closesttavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closesttavern = bot.taverns[i];
+                }
+         }
+         console.log("Going to Tavern");
+         myDir = bot.findPath(myPos, closesttavern);
+         }
+        </code></pre></div>
+        
+        <p id="taverns_explination"> This code is made to find the closest tavern and send my bot to that tavern to heal or tavern camp depending on the situation. Notice how the code is one whole if statement. The condition for this statement is 
+        (task === taverns). This is saying to initiate this code block if the bot chose the taverns task. After the conditional is "var closesttavern = bot.taverns[0]." The code means that there is a variable called "closesttavern" that equals the array
+        "bot.taverns." These are a lot of new definitions so they need some explination. A variable is a way to refer to data in the code. An array is a container to hold in large amounts of data. By setting an array equal to a variable, the array can be 
+        referred to as the variable's name in the following code. The specific array is "bot.taverns" which contains information about the location of all the taverns on the map. After the variable and array is the for loop, indicated by "for." A for loop is a line of code 
+        that executes the commands within it multiple times until it is instructed to stop. Next to the "for" is a set of conditionals containing "i." "i" means index, or the place of an object in an array. The first place starts at n index of 0 and it increases from there. In fact,
+        this is what "i = 0" means. After this is "i < bot.taverns.length." This instructs the for loop to keep running and repating until it reaches an index that is equal to the final index of the array. It basically means keep on going until
+        it reaches the array's end. The final conditional is "i++." The for loop adds 1 to the index after every cycle to it uses the next piece of data in the array for i. This leads to the for loop running for every piece of data in the array.
+        After these conditionals is another if statement. The conditionals for this statement seem clustered. What they are telling my bot to do is find the distance between itself and the closest tavern (bot.findDistance(myPos, closesttavern)) and
+        the distance from itself and another tavern on the map (bot.findDistance(myPos, bot.taverns[i])). It then compares the distances, as indicated by the greater than sign. If the distance between the bot to the closest tavern is greater than the distance 
+        from bot to another tavern, the if statement runs. The code inside the if statement is "closesttavern = bot,taverns[i]." If the if statement runs, then the tavern that is the closer of the two becomes the variable "closesttavern." This makes the variable
+        the truely closes tavern rather than just all the taverns. The final two pieces of code instruct the bot on how to execute the task. The console.log command tells the program to type in "Going to Tavern" in the console in order to tell me what 
+        command the bot is following. Finally, the "myDir" code finds a path from my bot's current position to the closest tavern found earlier and sends my bot on that path. Basically, this code is telling the bot to find the location of all the taverns, 
+        compare their distances to it, find the one that is closest, and go there. </p></div>
+        
+        <div id="freemines_div"><center><h5>Claiming Free Mines</h5></center>
+        
+        <div class="codediv"><pre><code id="code_freemines">
+            if(task === "freemines") {
+            var closestMine = bot.freeMines[0];
+            for(i = 0; i < bot.freeMines.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                    closestMine = bot.freeMines[i];
+                }
+            }
+            console.log("Claiming a Free Mine!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        </code></pre></div>
+        
+        <p id="freemines_explination"> Looking at the code, it is almost an exact replica of my taverns code except that it finds the closest mine instead of the closest tavern. The code is ran if my bot picks the task of "freemines." The variable "closestMine"
+        holds an array of the location of all the free mines at first. After running the for loop through the array "bot.freeMines," the bot compares the distance between itself and the closest mines and the distance from itself to another free mine. If the distance 
+        to the other mine is shorter, then the variable "closestMine" gets replaced with the data of that mine. This sets the variable to have the mine with the shortest distance to the player. The bot then console logs "Claiming a Free Mine" to tell me what it is doing
+        and the "myDir" code sets the bot on a path to the closest free mine. The reason why this explination is much shorter than the one for taverns is that this code is almost aa copy of it. The details about how the code works are up there and this is a summary of it in 
+        more basic terms. </p></div>
+        
+        <div id="attack_div"><center><h6>Attacking Rich Boy</h6></center>
+        
+        <div class="codediv"><pre><code id="code_attack">
+        if (task === "attack") {
+         var richerBot = enemyBots[0];
+        for (i = 0; i < enemyBots.length; i++) {
+            if (bot.yourBot.mineCount < enemyBots[i].mineCount) {
+                richerBot = enemyBots[i];
+            }
+        }
+            console.log("Attacking Rich Boy");
+            myDir = bot.findPath(myPos , [richerBot.pos.x , richerBot.pos.y]);
+        
+        }</code></pre></div>
+        
+        <p id="attack_explination"> The final major piece of code is the attack code. Remember that this code is only ran if the bot can't claim any more free mines or can't go to the tavern. This code is also similar to the code for the taverns but
+        also has some differences. The variable that contains all the information for the enemy bots is "var richerBot = enemyBots[0]." However, it will eventually be changed to only contaain the information of the bots that have more mines than my bot. 
+        The for loop for this code runs through the array of "enemyBots" but this time, it compares my mine count to the mine count of another bot. By using "bot.yourBot.mineCount < enemyBots[i].mineCount," my bot finds other bots who
+        have more mines than it. Since the array contains all the information for the enemy bots, the ".mineCount" at the end was needed to specify the information the bot needs to extract. By running the if statement, the variable of "richerBot" 
+        holds the information of the bot that has more mines than mine rather than all the information of all enemies. Finally, it bot console logs "Attacking Rich Boy" to tell me what it is doing and then sets a path to the position of the 
+        richer bot. Notice how the position of the bot is specified with "[richerBot.pos.x , richerBot.pos.y]." This is also because the "richerBot" variable contains all the information of that bot but I only need its position. The data to select from
+        needs to be specified. This code was intended to target the bot with the most amount of mines but multiple bots can qualify for having more mines than mine. This leads my bot to attack anyone who has more mines than itself. This limiation isn't 
+        too bad because my bot only needs to steal a few mines before going to the tavern to camp. </p></div>
+        
+        <div id="reflection_div"><center><h7>Reflection</h7></center>
+        
+        <p id="reflection"> From all of this programming this week, I learned a lot of new information. What I took away was that Ai programming is challenging. When explaining something to a human, there can be some skipped information because
+        a human can fill in the gaps. This is different for computer AI. They need their tasks to be listed out for them and need specific instructions on what to do. Everything needs to be broken down into simple commands. There can be moments where
+        some instructions are skipped, leading to a bot that doesn't function as it should or worse, crashing. I had my fair share of difficulties when programming by bot and I witnessed others have the same issues. It was only when we teamed up did we 
+        succeed. The challenges of coding AI brought some of us together in a new way. I respect those who do this career for a living because they must require lots of attention to detail. One slip-up in the syntax of the code or just improper coding in general will
+        lead to a major problem. However, the perservere across probably numerous issues and come out with AI that works and can sometimes break the boundries between human and machine thinking. This week as a very frustrating but eye-opening experience. </p></div></div>
+        
+    </body>
+</html>
