@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
+    
+    <style>
+      
+      #first_text {
+          text-align:center;
+          position:absolute;
+          margin-top:-30%;
+          margin-left:33%;
+          font-size:30px;
+      }
+      #nextbutton {
+          position:absolute;
+          margin-left:60%;
+          margin-top:-5%;
+          font-size:30px;
+      }
+      #backbutton {
+          position:absolute;
+          margin-left:35%;
+          margin-top:-5%;
+          font-size:30px;
+      }
+      
+        
+    </style>
+    
     <head>
-        <title> </title>
+        <title>Modeling Webpage</title>
     </head>
     <body>
-
+     <h1>Evolution of US Navy Crusiers</h1> 
+     <center><canvas id="mycanvas" width="1000px" height="700px" style="border: 2px solid black"></canvas></center>
+     
+     <p id="first_text">Click the first button to begin the journey of learning how <br>
+     US Crusiers evolved for the US Navy.</p>
+     <input type="button" value="Previous" id="backbutton">
+     <input type="button" value="Next" id="nextbutton">
+     
+     <div id="intro"><h2 id="intro_header"></h2>
+     <p id="intro_text"></p>
+     </div>
+    
     <script src="modeling.js"></script>
     </body>
 </html>
