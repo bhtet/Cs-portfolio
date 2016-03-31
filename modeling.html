@@ -3,6 +3,20 @@
     
     <style>
       
+      body {
+          background-image:url("http://hd4wallpapers.net/wp-content/uploads/2014/12/Ocean-Background.jpg");
+          background-size:100%;
+      }
+      h1 {
+       text-align:center; 
+       font-size:40px;
+      }
+      #navyimage {
+          position:absolute;
+          width:100px;
+          top:10px;
+          left:20%;
+      }
       #first_text {
           text-align:center;
           position:relative;
@@ -12,27 +26,60 @@
       #nextbutton {
           position:absolute;
           left:60%;
-          top:90%;
+          top:93%;
           font-size:30px;
       }
       #backbutton {
           position:absolute;
           left:35%;
-          top:90%;
+          top:93%;
           font-size:30px;
       }
      #image {
          top:50%;
-         width:600px;
+         height:400px;
+         margin-bottom:0.5%;
      }
      #heading {
+         font-size:25px;
+         font-family:"Arial";
+         text-align:center;
+         margin-bottom:2%;
+     }
+     #info {position:relative;
          font-size:20px;
          font-family:"Arial";
+         width:1000px;
+         left: 17%;
+         background-color:white;
+         padding:1%;
      }
-     #info {
-         font-size:17px;
-         font-family:"Arial";
-     }
+      #tableofcontents {
+        float: right;
+        height: 2%;
+        position: fixed;
+        right: 2%;
+        font-family: "Arial";
+        background-color:white;
+    }
+    
+    table {
+        border-collapse: collapse;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    
+    th,
+    td {
+        border: 2px solid black;
+        padding: 10px;
+    }
+     #divfortableofcontents {
+            font-family: "Arial";
+            width: 80%;
+            margin-left: 1%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
 
     </style>
     
@@ -40,19 +87,54 @@
         <title>Modeling Webpage</title>
     </head>
     <body>
-     <h1>Evolution of US Navy Crusiers</h1> 
+        
+         <table align="right" id="tableofcontents">
+        <thead>
+            <tr>
+                <th>Table of Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="index.html">Welcome</a></td>
+            </tr>
+            <tr>
+                <td><a href="html_css.html">What is HTML and CSS?</a></td>
+            </tr>
+            <tr>
+                <td><a href="calc.html">Calculator</a></td>
+            </tr>
+            <tr>
+                <td><a href="info.html">Info Site</a></td>
+            </tr>
+            <tr>
+                <td><a href="dice.html">Dice Rolling Simulator</a></td>
+            </tr>
+            <tr>
+                <td><a href="vindinium.html">Vindinium AI Coding</a></td>
+            </tr>
+            <tr>
+                <td><a href="modeling.html">Modeling Website</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+     <div id="divfortableofcontents"><h1>Evolution of US Navy Crusiers</h1> <img src="http://www.usna.edu/USNABand/_files/images/history/anchors%20aweigh%20centennial%20coin%20back.jpg" id="navyimage">
      
-     <p id="first_text">Click the first button to begin the journey of learning how <br>
+  
+     <p id="first_text">Click the NEXT button to begin the journey of learning how <br>
      US Crusiers evolved for the US Navy.</p>
      <input type="button" value="Previous" id="backbutton">
      <input type="button" value="Next" id="nextbutton"> 
      
      <p id="heading"></p>
-     <img id="image"></img>
-     <p id="info"></p>
-    
-    
-    
+     <center><img id="image"></img></center>
+     <p id="info">A cruiser is a medium sized warships designed for performing a vast range of roles, from heavy support to convot escort to fleet escort. They were in their prime during the 20th century, where they were important parts of a 
+     navy's fleet. There were two classificion types for cruisers. At the start of the century, they were divided up as mainly protect cruisers or armored cruisers. Around WWI, this designation shifted to light cruisers and heavy cruisers. For both classification types, 
+     the protected or light cruisers were usually the more lightly armed, had less protection, but were more manuverable. Armored and heavy cruisers had more armor and firepower. Eventually, they had the technology and equipment to reach the speeds of their lighter
+     counterparts. The US Navy's beginning of their cruiser program was interesting because they were building up a "new navy" by transitioning from wooden and wind-powered ships to steel warships armed with larger cannons. </p>
+     </div>
+     
     <script src="modeling.js"></script>
     </body>
 </html>
